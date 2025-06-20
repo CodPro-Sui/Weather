@@ -97,13 +97,14 @@ function getUserLoaction() {
   }
 }
 
-function getLocation(position) {
+  function getLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
+  console.log(lon);
   const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
-  fetch(url, { headers: { 'User-Agent': 'MySite/1.0' } }).then(res => res.json()).then(data => {
-    let c = data.address.city || data.address.town || data.address.village || "Unknown";
-    cityName.value = c.trim();
+   fetch(url, { headers: {'User-Agent':'MySite/1.0' } }).then(res =>  res.json()).then(data => {
+    let c = data.address.city || data.address.town || data.address.village;
+    cityName.value = c;
     fetchWeather(cityName.value);
   }).catch(err => alert(`Unable to catch, ${err.message}`))
 }
@@ -122,3 +123,4 @@ setInterval(() =>{
   let timing = new Date();
   current.innerHTML = `<strong>Time: </strong> ${String(timing.getHours()).padStart(2,"0")}:${String(timing.getMinutes()).padStart(2,"0")}:${String(timing.getSeconds()).padStart(2,"0")}`;
 },1000)
+        
