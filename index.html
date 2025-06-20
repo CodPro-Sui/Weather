@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather || CodPro Sui {°_°}</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=sunny" />
+</head>
+
+<body>
+  <div class="weatherPage">
+    <header id="searchValue"></header>
+    <!-- enter city Name must be required! -->
+    <div class="searchCityName">
+      <input type="text" name="city" id="cityName" placeholder="Enter City" required />
+      <button type="submit" id="set">GPS</button>
+    </div>
+    <!-- header data-->
+    <div class="weatherHeader">
+      <h1 id="tem">35°C</h1>
+    </div>
+    
+    
+    <div class="weatherNow">Weather: <div id="weather"> clear</div></div>
+    
+    <!-- details -->
+    <div class="weatherDetails">
+      <!-- first -->
+      <div class="ltInfo">
+        <div class="ltImage"><i class="fa-solid fa-temperature-three-quarters"></i></div>
+        <p class="ltContent">Feels like</p>
+        <p><strong class="ltData" id="feelsLike">33°</strong></p>
+      </div>
+      <!-- second -->
+      <div class="ltInfo">
+        <div class="humidityImage"><i class="fa-solid fa-droplet"></i></div>
+        <p class="humidityContent">Humidity</p>
+        <p><strong class="ltData" id="humidity">33%</strong></p>
+      </div>
+      <!-- third -->
+      <div class="ltInfo">
+        <div class="HumidityImage"><i class="fa-solid fa-wind"></i></div>
+        <p class="windContent">Wind</p>
+        <p><strong class="ltData" id="wind">10mph</strong></p>
+      </div>
+      <!-- fourth -->
+      <div class="ltInfo">
+        <div class="pressureImage"><i class="fa-solid fa-lines-leaning"></i></div>
+        <p class="pressureContent">Air puss</p>
+        <p><strong class="ltData" id="pressure">33hpa</strong></p>
+      </div>
+      <!-- fiveth -->
+      <div class="ltInfo">
+        <div class="visibilityImage"><i class="fa-solid fa-eye"></i></div>
+        <p class="visibilityContent">Visibility</p>
+        <p><strong class="ltData" id="visibility">9km</strong></p>
+      </div>
+      <!-- sixth -->
+      <div class="ltInfo">
+        <div class="highImage"><i class="fa-solid fa-temperature-high"></i></div>
+        <p class="highContent">High</p>
+        <p><strong class="ltData" id="highTemp">33°</strong></p>
+      </div>
+    </div>
+    <!-- end details -->
+    <div class="time">
+      <!-- sunrise -->
+      <div class="sunriseTime">
+        <div class="sunrise"><strong>Sunrise</strong></div>
+        <div id="srt">4:54</div>
+      </div>
+      <!-- sunrise -->
+      <div class="sunsetTime">
+        <div class="sunset"><strong>Sunset</strong></div>
+        <div id="sst">16:09</div>
+      </div>
+    </div>
+  
+  <!-- current time -->
+  <div id="current">
+    
+  </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
